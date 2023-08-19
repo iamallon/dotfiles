@@ -1,0 +1,86 @@
+format = '$all'
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+[package]
+symbol = "pkg "
+disabled = true
+
+[kubernetes]
+symbol = "k8s "
+detect_folders = ['.kube']
+disabled = false
+
+[username]
+show_always = true
+
+[time]
+format = "[$time]($style) "
+time_format = "%R"
+disabled = false
+
+[helm]
+symbol = "helm "
+
+[git_commit]
+tag_symbol = " tag "
+
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+
+[cmake]
+symbol = "cmake "
+
+[dotnet]
+symbol = ".NET "
+
+[docker_context]
+symbol = "docker "
+
+[git_branch]
+symbol = "git "
+
+[golang]
+symbol = "go "
+
+[guix_shell]
+symbol = "guix "
+
+[hg_branch]
+symbol = "hg "
+
+[java]
+symbol = "java "
+
+[memory_usage]
+symbol = "memory "
+
+[perl]
+symbol = "pl "
+
+[python]
+symbol = "py "
+
+[rust]
+symbol = "rs "
+
+[sudo]
+symbol = "sudo "
+
+[terraform]
+symbol = "terraform "
+
+[aws]
+symbol = "aws "
+
+[azure]
+symbol = "az "
+
+[battery]
+discharging_symbol = "batt "
