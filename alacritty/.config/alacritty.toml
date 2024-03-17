@@ -1,5 +1,9 @@
 # Colors (Everforest Dark)
 
+[shell]
+program = "/bin/bash"
+args = ["-l", "-c", "tmux attach || tmux"]
+
 # Default colors
 [colors.primary]
 background = '#2d353b'
@@ -35,8 +39,8 @@ shape = "Block"
 size = 13.0
 
 [font.normal]
-family = "Red Hat Mono"
-style = "SemiBold"
+family = "Zed Mono"
+style = "Bold Extended"
 
 [window]
 padding = { x = 15, y = 0 }
