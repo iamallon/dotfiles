@@ -1,8 +1,7 @@
 # Colors (Everforest Dark)
 
-[shell]
-program = "/bin/bash"
-args = ["-l", "-c", "tmux attach || tmux"]
+[terminal.shell]
+program = "tmux"
 
 # Default colors
 [colors.primary]
