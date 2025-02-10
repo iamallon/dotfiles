@@ -21,6 +21,8 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.lsp.inlay_hint.enable()
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {

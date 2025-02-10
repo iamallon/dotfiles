@@ -9,7 +9,8 @@ return
     opts = function()
         local cmp = require("cmp")
         local auto_select = true
-        return {
+        return
+        {
             auto_brackets = {},
             completion    = {
                 completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
