@@ -12,5 +12,6 @@ return
             }
         }
         vim.keymap.set('n', '<space><space>', require('telescope.builtin').find_files, { desc = 'Telescope find files' })
+        vim.keymap.set('n', '<space>b', require('telescope.builtin').buffers, { desc = 'Telescope buffers' })
     end
 }

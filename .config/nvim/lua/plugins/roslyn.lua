@@ -3,8 +3,6 @@ return
     "seblyng/roslyn.nvim",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
-        vim.lsp.inlay_hint.enable()
-
         require('roslyn').setup {
             filewatching = false,
             broad_search = true,
