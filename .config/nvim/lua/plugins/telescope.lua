@@ -9,6 +9,10 @@ return
     config = function()
         require('telescope').setup {
             defaults = {
+                preview = {
+                    filesize_limit = 0.1
+                },
+                file_ignore_patterns = { ".git", ".vs", ".idea" },
                 mappings = {
                     n = {
                         ["d"] = require("telescope.actions").delete_buffer,

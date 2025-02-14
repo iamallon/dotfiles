@@ -14,7 +14,7 @@ local function update_winbar()
     vim.opt.winbar = "("
         .. buffer_count
         .. ") %m "
-        .. "%f"
+        .. "%t"
 end
 
 vim.api.nvim_create_autocmd({ "BufEnter", "WinEnter" }, {
