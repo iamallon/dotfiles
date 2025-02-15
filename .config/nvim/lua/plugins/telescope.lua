@@ -20,6 +20,14 @@ return
                 }
             },
             pickers = {
+                lsp_implementations = {
+                    initial_mode = "normal",
+                    theme = "ivy"
+                },
+                lsp_references = {
+                    initial_mode = "normal",
+                    theme = "ivy"
+                },
                 find_files = {
                     theme = "ivy"
                 },
@@ -38,8 +46,5 @@ return
         }
 
         require("telescope").load_extension("ui-select")
-
-        vim.keymap.set('n', '<space><space>', require('telescope.builtin').find_files, { desc = 'Telescope find files' })
-        vim.keymap.set('n', '<space>b', require('telescope.builtin').buffers, { desc = 'Telescope buffers' })
     end
 }
