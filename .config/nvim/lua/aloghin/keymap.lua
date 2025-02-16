@@ -5,7 +5,7 @@ vim.keymap.set('n', '<space>b', require('telescope.builtin').buffers)
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 vim.keymap.set("n", "gi", require('telescope.builtin').lsp_implementations)
-vim.keymap.set("n", "gf", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<Tab>", vim.lsp.buf.code_action)
 vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references)
 vim.keymap.set("n", "ff", vim.lsp.buf.format)
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
