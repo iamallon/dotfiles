@@ -7,12 +7,12 @@ return
         "nvim-telescope/telescope-ui-select.nvim"
     },
     config = function()
-        require('telescope').setup {
+        require("telescope").setup {
             defaults = {
                 preview = {
                     filesize_limit = 0.1
                 },
-                file_ignore_patterns = { ".git", ".vs", ".idea" },
+                file_ignore_patterns = { ".git", ".vs", ".idea", "bin", "obj" },
                 mappings = {
                     n = {
                         ["d"] = require("telescope.actions").delete_buffer,

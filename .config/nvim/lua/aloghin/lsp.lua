@@ -3,5 +3,3 @@ vim.diagnostic.config({
     signs = { severity = { min = vim.diagnostic.severity.WARN } },
     underline = { severity = { min = vim.diagnostic.severity.WARN } },
 })
-
-vim.lsp.inlay_hint.enable()
