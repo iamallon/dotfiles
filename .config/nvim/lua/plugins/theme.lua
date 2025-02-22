@@ -20,6 +20,7 @@ return
                 local U = require("nordic.utils")
                 highlights.TelescopeSelection = { bg = U.blend(palette.gray5, palette.bg, 0.50) }
                 highlights.TelescopeSelectionCaret = { fg = palette.bg, bg = palette.bg }
+                highlights.TelescopeMultiSelection = { bold = true }
                 for _, highlight in pairs(highlights) do
                     highlight.italic = false
                 end
