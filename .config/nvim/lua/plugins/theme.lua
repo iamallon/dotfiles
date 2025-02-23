@@ -30,6 +30,7 @@ return
                 palette.bg_visual = U.blend(palette.gray5, palette.bg, 0.50)
                 palette.bg = palette.black1
                 palette.bg_float = "#000000"
+                palette.comment = palette.gray5
             end,
             bold_keywords = true,
             reduced_blue = false,
