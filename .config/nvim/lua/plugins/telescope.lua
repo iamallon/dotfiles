@@ -28,6 +28,9 @@ return
                     initial_mode = "normal",
                     theme = "ivy"
                 },
+                live_grep = {
+                    theme = "ivy"
+                },
                 find_files = {
                     theme = "ivy"
                 },
