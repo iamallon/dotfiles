@@ -1,7 +1,7 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("n", "<space><space>", require("telescope.builtin").find_files)
-vim.keymap.set("n", "<space>b", require("vimtelescope.builtin").buffers)
+vim.keymap.set("n", "<space>b", require("telescope.builtin").buffers)
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 vim.keymap.set("n", "gi", require("telescope.builtin").lsp_implementations)
