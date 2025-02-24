@@ -25,6 +25,7 @@ return
                     theme = "ivy"
                 },
                 lsp_references = {
+                    show_line = false,
                     initial_mode = "normal",
                     theme = "ivy"
                 },
