@@ -26,28 +26,29 @@ return
                 end
             },
             mapping = {
-                ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-                ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-                ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                ["<Up>"] = cmp.mapping.select_prev_item(cmp_select),
+                ["<Down>"] = cmp.mapping.select_next_item(cmp_select),
                 ["<C-Space>"] = cmp.mapping.complete(),
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
-                        cmp.select_next_item()
+                        local entry = cmp.get_selected_entry()
+                        if not entry then
+                            cmp.select_next_item(cmp_select)
+                        end
+                        cmp.confirm()
                     elseif luasnip.locally_jumpable(1) then
                         luasnip.jump(1)
                     else
                         fallback()
                     end
-                end, { "i", "s" }),
+                end, { "i", "s", "c", }),
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_prev_item()
-                    elseif luasnip.locally_jumpable(-1) then
+                    if luasnip.locally_jumpable(-1) then
                         luasnip.jump(-1)
                     else
                         fallback()
                     end
-                end, { "i", "s" }),
+                end, { "i", "s", }),
             },
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
