@@ -29,6 +29,17 @@ return
                 ["<Up>"] = cmp.mapping.select_prev_item(cmp_select),
                 ["<Down>"] = cmp.mapping.select_next_item(cmp_select),
                 ["<C-Space>"] = cmp.mapping.complete(),
+                ['<CR>'] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        local entry = cmp.get_selected_entry()
+                        if not entry then
+                            cmp.select_next_item(cmp_select)
+                        end
+                        cmp.confirm()
+                    else
+                        fallback()
+                    end
+                end),
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         local entry = cmp.get_selected_entry()
@@ -41,14 +52,14 @@ return
                     else
                         fallback()
                     end
-                end, { "i", "s", "c", }),
+                end),
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
                     if luasnip.locally_jumpable(-1) then
                         luasnip.jump(-1)
                     else
                         fallback()
                     end
-                end, { "i", "s", }),
+                end),
             },
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },

@@ -6,8 +6,7 @@ return
     config = function()
         require "nvim-treesitter.configs".setup {
             ensure_installed = { "go", "c_sharp", "markdown", "markdown_inline", "lua", "vimdoc", "json", "yaml" },
-            highlight = { enable = true },
-            indent = { enable = true },
+            highlight = { enable = true }
         }
     end
 }
