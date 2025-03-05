@@ -2,7 +2,6 @@ return
 {
     "AlexvZyl/nordic.nvim",
     lazy = false,
-    tag = "0.1.0",
     priority = 1000,
     config = function()
         require("nordic").setup {
@@ -20,6 +19,9 @@ return
             on_highlight = function(highlights, palette)
                 local U = require("nordic.utils")
                 highlights.MatchParen = { bg = U.blend(palette.gray5, palette.bg, 0.50) }
+                highlights.LineNrAbove = { fg = palette.gray5, bold = false }
+                highlights.LineNr = { fg = palette.white0, bold = true }
+                highlights.LineNrBelow = { fg = palette.gray5, bold = false }
                 highlights.TelescopeSelection = { bg = U.blend(palette.gray5, palette.bg, 0.50) }
                 highlights.TelescopeSelectionCaret = { fg = palette.bg, bg = palette.bg }
                 highlights.TelescopeMultiSelection = { bold = true }

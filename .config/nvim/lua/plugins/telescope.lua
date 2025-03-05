@@ -33,6 +33,7 @@ return
                     theme = "ivy"
                 },
                 find_files = {
+                    hidden = true,
                     theme = "ivy"
                 },
                 buffers = {
