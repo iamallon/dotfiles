@@ -18,6 +18,7 @@ return
             end,
             on_highlight = function(highlights, palette)
                 local U = require("nordic.utils")
+                highlights.Search = { bg = palette.bg_visual, fg = palette.yellow.bright, bold = true, underline = false }
                 highlights.MatchParen = { bg = U.blend(palette.gray5, palette.bg, 0.50) }
                 highlights.LineNrAbove = { fg = palette.gray5, bold = false }
                 highlights.LineNr = { fg = palette.white0, bold = true }
