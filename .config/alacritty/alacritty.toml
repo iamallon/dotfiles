@@ -38,8 +38,8 @@ shape = "Block"
 size = 13.0
 
 [font.normal]
-family = "Zed Mono"
-style = "Bold Extended"
+family = "Cascadia Mono"
+style = "SemiBold"
 
 [window]
 padding = { x = 15, y = 0 }
