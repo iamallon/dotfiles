@@ -4,6 +4,9 @@ vim.keymap.set("n", "<space><space>", require("telescope.builtin").find_files)
 vim.keymap.set("n", "<space>b", require("telescope.builtin").buffers)
 vim.keymap.set("n", "<space>f", require("telescope.builtin").live_grep)
 
+vim.keymap.set({ "n", "v", "x" }, "g<Up>","<C-b>")
+vim.keymap.set({ "n", "v", "x" }, "g<Down>", "<C-f>")
+
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 vim.keymap.set("n", "gi", require("telescope.builtin").lsp_implementations)
 vim.keymap.set("n", "<Tab>", vim.lsp.buf.code_action)
