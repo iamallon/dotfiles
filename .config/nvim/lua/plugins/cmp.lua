@@ -26,8 +26,8 @@ return
                 end
             },
             mapping = {
-                ["g<Up>"] = cmp.mapping.scroll_docs(-4),
-                ["g<Down>"] = cmp.mapping.scroll_docs(4),
+                ["<PageUp>"] = cmp.mapping.scroll_docs(-4),
+                ["<PageDown>"] = cmp.mapping.scroll_docs(4),
                 ["<Up>"] = cmp.mapping.select_prev_item(cmp_select),
                 ["<Down>"] = cmp.mapping.select_next_item(cmp_select),
                 ["<C-Space>"] = cmp.mapping.complete(),
