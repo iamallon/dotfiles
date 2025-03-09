@@ -45,9 +45,6 @@ return
             transparent = {
                 bg = false,
                 float = false,
-            },
-            leap = {
-                dim_backdrop = true,
             }
         }
 
