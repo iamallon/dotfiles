@@ -1,4 +1,5 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "-", "<cmd>Oil<CR>")
 
 vim.keymap.set("n", "<space><space>", require("telescope.builtin").find_files)
 vim.keymap.set("n", "<space>b", require("telescope.builtin").buffers)
