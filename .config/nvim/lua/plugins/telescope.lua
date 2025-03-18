@@ -29,6 +29,10 @@ return
                     initial_mode = "normal",
                     theme = "ivy"
                 },
+                grep_string = {
+                  disable_coordinates = true,
+                  theme = "ivy"
+                },
                 live_grep = {
                     theme = "ivy"
                 },
