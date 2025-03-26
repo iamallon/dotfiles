@@ -6,6 +6,9 @@ vim.keymap.set("n", "<space>b", require("telescope.builtin").buffers)
 vim.keymap.set("n", "<space>g", require("telescope.builtin").live_grep)
 vim.keymap.set("n", "<space>w", function() require("telescope.builtin").grep_string({search = vim.fn.expand("<cword>")}) end)
 
+vim.keymap.set("n", "d", "\"_d")
+vim.keymap.set("n", "dd", "\"_dd")
+
 vim.keymap.set("o", "iq", "i\"")
 vim.keymap.set("o", "iQ", "i\'")
 vim.keymap.set("o", "aq", "a\"")
