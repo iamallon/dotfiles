@@ -10,7 +10,6 @@ return
     config = function()
         local luasnip = require("luasnip")
         local cmp = require("cmp")
-        local cmp_select = { behavior = cmp.SelectBehavior.Select }
         local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
         cmp.event:on(
@@ -28,28 +27,22 @@ return
             mapping = {
                 ["<PageUp>"] = cmp.mapping.scroll_docs(-4),
                 ["<PageDown>"] = cmp.mapping.scroll_docs(4),
-                ["<Up>"] = cmp.mapping.select_prev_item(cmp_select),
-                ["<Down>"] = cmp.mapping.select_next_item(cmp_select),
+                ["<Up>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+                ["<Down>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
                 ["<C-Space>"] = cmp.mapping.complete(),
-                ["<CR>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        local entry = cmp.get_selected_entry()
-                        if not entry then
-                            cmp.select_next_item(cmp_select)
+                ["<CR>"] = cmp.mapping({
+                    i = function(fallback)
+                        if cmp.visible() and cmp.get_active_entry() then
+                            cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+                        else
+                            fallback()
                         end
-                        cmp.confirm()
-                    else
-                        fallback()
-                    end
-                end),
+                    end,
+                    s = cmp.mapping.confirm({ select = true }),
+                    c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+                }),
                 ["<Tab>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        local entry = cmp.get_selected_entry()
-                        if not entry then
-                            cmp.select_next_item(cmp_select)
-                        end
-                        cmp.confirm()
-                    elseif luasnip.locally_jumpable(1) then
+                    if luasnip.locally_jumpable(1) then
                         luasnip.jump(1)
                     else
                         fallback()
