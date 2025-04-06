@@ -6,7 +6,7 @@ return
     require("modus-themes").setup {
       variant = "default",
       styles = {
-        comments = { italic = false },
+        comments = { italic = true },
         keywords = { italic = false }
       }
     }
