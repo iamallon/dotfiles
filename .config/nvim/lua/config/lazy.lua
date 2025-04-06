@@ -19,7 +19,7 @@ vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
   ui = {
-     icons = {
+    icons = {
       cmd = "",
       config = "",
       debug = "",

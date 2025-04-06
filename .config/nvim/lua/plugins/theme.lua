@@ -3,7 +3,7 @@ return
   "miikanissi/modus-themes.nvim",
   priority = 1000,
   config = function()
-    require("modus-themes").setup{
+    require("modus-themes").setup {
       variant = "default",
       styles = {
         comments = { italic = false },
@@ -14,4 +14,3 @@ return
     vim.cmd([[colorscheme modus_vivendi]])
   end
 }
-
