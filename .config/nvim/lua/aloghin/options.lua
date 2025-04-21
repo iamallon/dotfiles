@@ -7,6 +7,10 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
+vim.opt.undofile = true
+
+vim.opt.scrolloff = 8
+
 vim.opt.wrap = false
 
 vim.opt.incsearch = true
