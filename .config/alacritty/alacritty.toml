@@ -1,4 +1,3 @@
-# Colors (Everforest Dark)
 [env]
 TERM = "xterm-256color"
 
@@ -6,43 +5,54 @@ TERM = "xterm-256color"
 program = "tmux"
 args = ["-2"]
 
-# Default colors
+# Modus Themes for Alacritty
 [colors.primary]
-background = '#2d353b'
-foreground = '#d3c6aa'
+background   = '0x000000'
+foreground   = '0xffffff'
 
 # Normal colors
 [colors.normal]
-black   = '#475258'
-red     = '#e67e80'
-green   = '#a7c080'
-yellow  = '#dbbc7f'
-blue    = '#7fbbb3'
-magenta = '#d699b6'
-cyan    = '#83c092'
-white   = '#d3c6aa'
+black     = '0x000000'
+red       = '0xff5f59'
+green     = '0x44bc44'
+yellow    = '0xd0bc00'
+blue      = '0x2fafff'
+magenta   = '0xfeacd0'
+cyan      = '0x00d3d0'
+white     = '0xffffff'
 
 # Bright colors
 [colors.bright]
-black   = '#475258'
-red     = '#e67e80'
-green   = '#a7c080'
-yellow  = '#dbbc7f'
-blue    = '#7fbbb3'
-magenta = '#d699b6'
-cyan    = '#83c092'
-white   = '#d3c6aa'
+black     = '0x1e1e1e'
+red       = '0xff5f5f'
+green     = '0x44df44'
+yellow    = '0xefef00'
+blue      = '0x338fff'
+magenta   = '0xff66ff'
+cyan      = '0x00eff0'
+white     = '0x989898'
+
+[[colors.indexed_colors]]
+index     = 16
+color     = '0xfec43f'
+
+[[colors.indexed_colors]]
+index     = 17
+color     = '0xff9580'
 
 [cursor.style]
 blinking = "Always"
 shape = "Block"
 
 [font]
-size = 13.0
+size = 18.0
 
 [font.normal]
-family = "Cascadia Mono NF"
-style = "SemiBold"
+family = "IBM Plex Mono"
+style = "Medium"
+
+[font.italic]
+style= "Medium Italic"
 
 [window]
 padding = { x = 15, y = 0 }
@@ -50,6 +60,7 @@ dynamic_padding = true
 dynamic_title = true
 opacity = 0.95
 startup_mode = "Maximized"
+option_as_alt = "Both"
 
 [selection]
 save_to_clipboard = true
