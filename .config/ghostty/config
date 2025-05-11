@@ -1,6 +1,7 @@
 window-height = 200
 window-width = 400
-title = "ghostty"
+window-save-state = always
+window-padding-x = 10
 
 # Modus Vivendi theme
 palette = 0=#000000
@@ -33,6 +34,7 @@ font-thicken = true
 
 cursor-style = block
 cursor-style-blink = false
+shell-integration-features = no-cursor
 
 link-url = true
 confirm-close-surface = false
