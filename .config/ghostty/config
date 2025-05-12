@@ -1,8 +1,12 @@
+title = ghostty
+background-opacity = 0.95
+
 window-height = 200
 window-width = 400
-window-save-state = always
 window-padding-x = 10
-title = ghostty
+window-inherit-working-directory = true
+window-inherit-font-size = true
+window-save-state = always
 
 # Modus Vivendi theme
 palette = 0=#000000
@@ -36,6 +40,8 @@ font-thicken = true
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
+
+clipboard-read = allow
 
 link-url = true
 confirm-close-surface = false
