@@ -7,7 +7,6 @@ window-width = 400
 window-padding-x = 10
 window-inherit-working-directory = true
 window-inherit-font-size = true
-window-save-state = always
 window-decoration = none
 
 # Modus Vivendi theme

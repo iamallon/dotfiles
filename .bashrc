@@ -120,6 +120,8 @@ export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/.local/bin:$PATH
 
+set -o vi
+
 # Init ssh-agent once.
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
   ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
