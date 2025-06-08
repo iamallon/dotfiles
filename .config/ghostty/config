@@ -48,6 +48,8 @@ link-url = true
 confirm-close-surface = false
 quit-after-last-window-closed = true
 
+keybind = ctrl+b=write_scrollback_file:paste
+
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+j=goto_split:bottom
 keybind = ctrl+k=goto_split:top
