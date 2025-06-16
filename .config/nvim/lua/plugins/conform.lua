@@ -15,6 +15,7 @@ return
 				css = { "biome" },
 				js = { "biome" },
 				json = { "biome" },
+				yaml = { "yamlfmt" },
 			},
 		})
 	end,
