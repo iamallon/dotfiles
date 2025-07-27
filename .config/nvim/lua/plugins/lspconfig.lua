@@ -1,5 +1,4 @@
-return
-{
+return {
 	"neovim/nvim-lspconfig",
 	tag = "v1.6.0",
 	config = function()
