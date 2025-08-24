@@ -15,6 +15,7 @@ return {
 				js = { "biome" },
 				json = { "biome" },
 				yaml = { "yamlfmt" },
+				terraform = { "terraform_fmt" },
 			},
 		})
 	end,
