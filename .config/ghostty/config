@@ -1,3 +1,5 @@
+term = xterm-256color
+
 title = ghostty
 fullscreen = true
 background-opacity = 0.95
