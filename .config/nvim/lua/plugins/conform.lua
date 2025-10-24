@@ -16,6 +16,7 @@ return {
 				json = { "biome" },
 				yaml = { "yamlfmt" },
 				terraform = { "terraform_fmt" },
+				c = { "clang-format" },
 			},
 		})
 	end,
