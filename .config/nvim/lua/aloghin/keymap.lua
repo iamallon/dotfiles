@@ -6,6 +6,7 @@ vim.keymap.set("n", "<space>b", require("telescope.builtin").buffers)
 vim.keymap.set("n", "<space>g", require("telescope.builtin").live_grep)
 vim.keymap.set("n", "<space>w", function() require("telescope.builtin").grep_string({search = vim.fn.expand("<cword>")}) end)
 
+vim.keymap.set("v", "y", "ygv<Esc>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")

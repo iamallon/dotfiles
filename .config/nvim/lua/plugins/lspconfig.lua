@@ -9,5 +9,8 @@ return {
 		require("lspconfig").typos_lsp.setup({
 			capabilities = capabilities,
 		})
+		require("lspconfig").clangd.setup({
+			capabilities = capabilities,
+		})
 	end,
 }
