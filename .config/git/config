@@ -1,0 +1,18 @@
+[user]
+  name = Alexandru Loghin
+  email = contact@allon.dev
+[core]
+  editor = nvim
+[merge]
+  conflictStyle = zdiff3
+[fetch]
+  prune = true
+  pruneTags = true
+[diff]
+  colorMoved = zebra
+[pull]
+  ff = only
+[core]
+  autocrlf = input
+[rerere]
+  enabled = true
