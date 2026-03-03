@@ -24,7 +24,7 @@ exec rm -f $wobpipe && mkfifo $wobpipe && tail -f $wobpipe | wob
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output eDP-1 scale 1.15
-output * bg /usr/share/backgrounds/079.png fill
+output * bg /usr/share/backgrounds/079.png fill #000000
 #
 # Example configuration:
 #
