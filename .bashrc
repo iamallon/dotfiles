@@ -12,6 +12,7 @@ if [ ! -f "$SSH_AUTH_SOCK" ]; then
 fi
 
 alias ls='ls --color=auto'
+alias emacs='emacsclient -nw'
 PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"

@@ -18,13 +18,14 @@ set $term footclient
 set $menu wmenu-run
 set $wobpipe $XDG_RUNTIME_DIR/wob.sock
 exec foot -s
+exec emacs --fg-daemon
 exec rm -f $wobpipe && mkfifo $wobpipe && tail -f $wobpipe | wob
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output eDP-1 scale 1.15
-output * bg /usr/share/backgrounds/079.png fill #000000
+output * bg /usr/share/backgrounds/od_ps.png fill #000000
 #
 # Example configuration:
 #
