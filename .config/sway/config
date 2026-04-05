@@ -18,7 +18,6 @@ set $term footclient
 set $menu wmenu-run
 set $wobpipe $XDG_RUNTIME_DIR/wob.sock
 exec foot -s
-exec emacs --fg-daemon
 exec rm -f $wobpipe && mkfifo $wobpipe && tail -f $wobpipe | wob
 
 ### Output configuration

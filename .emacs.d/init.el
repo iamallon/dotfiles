@@ -1,6 +1,14 @@
-(global-display-line-numbers-mode 1)
-(setq auto-save-default nil)
+(tool-bar-mode -1)
+(toggle-scroll-bar -1)
+(menu-bar-mode -1)
 
+(global-display-line-numbers-mode 1)
+(delete-selection-mode 1)
+(recentf-mode 1)
+
+(set-frame-font "IBM Plex Mono-18:weight=medium" nil t)
+(setq auto-save-default nil)
+(setq use-short-answers t)
 (setq treesit-language-source-alist
    '((bash "https://github.com/tree-sitter/tree-sitter-bash")
      (go-mod "https://github.com/camdencheek/tree-sitter-go-mod")
