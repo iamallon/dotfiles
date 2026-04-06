@@ -1,6 +1,9 @@
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
 (menu-bar-mode -1)
+(add-to-list 'default-frame-alist '(font . "IBM Plex Mono-18:weight=medium"))
+(add-to-list 'default-frame-alist '(alpha-background . 85))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (global-display-line-numbers-mode 1)
 (delete-selection-mode 1)
@@ -9,7 +12,6 @@
 (editorconfig-mode 1)
 (etags-regen-mode 1)
 
-(set-frame-font "IBM Plex Mono-18:weight=medium" nil t)
 (setq inhibit-splash-screen t)
 (setq auto-save-default nil)
 (setq use-short-answers t)
