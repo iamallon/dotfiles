@@ -6,6 +6,8 @@
 (delete-selection-mode 1)
 (recentf-mode 1)
 (electric-pair-mode 1)
+(editorconfig-mode 1)
+(etags-regen-mode 1)
 
 (set-frame-font "IBM Plex Mono-18:weight=medium" nil t)
 (setq inhibit-splash-screen t)
