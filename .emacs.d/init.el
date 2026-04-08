@@ -16,7 +16,7 @@
 (setq auto-save-default nil)
 (setq use-short-answers t)
 
-(setq grep-command "rg -nHS --no-heading \"$(git rev-parse --show-toplevel)\" -e ")
+(setq grep-command "rg -nHS --no-heading \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\" -e ")
 (setq grep-use-null-device nil)
 (global-set-key (kbd "C-x C-g") 'grep)
 

@@ -18,6 +18,7 @@ set $term footclient
 set $menu wmenu-run
 set $wobpipe $XDG_RUNTIME_DIR/wob.sock
 exec foot -s
+exec emacs --fg-daemon
 exec rm -f $wobpipe && mkfifo $wobpipe && tail -f $wobpipe | wob
 
 ### Output configuration
@@ -74,6 +75,9 @@ output DP-4 resolution 2560x1440@75Hz
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Start emacsclient
+    bindsym $mod+slash exec emacsclient -c
 
     # Kill focused window
     bindsym $mod+Shift+q kill
