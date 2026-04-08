@@ -16,6 +16,10 @@
 (setq auto-save-default nil)
 (setq use-short-answers t)
 
+(setq grep-command "rg -nHS --no-heading \"$(git rev-parse --show-toplevel)\" -e ")
+(setq grep-use-null-device nil)
+(global-set-key (kbd "C-x C-g") 'grep)
+
 (setq treesit-language-source-alist
    '((bash "https://github.com/tree-sitter/tree-sitter-bash")
      (go-mod "https://github.com/camdencheek/tree-sitter-go-mod")
