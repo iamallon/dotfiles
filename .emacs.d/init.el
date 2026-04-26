@@ -14,6 +14,7 @@
 
 (setq inhibit-splash-screen t)
 (setq auto-save-default nil)
+(setq make-backup-files nil)
 (setq use-short-answers t)
 
 (setq grep-command "rg -nHS --no-heading \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\" -e ")
@@ -21,9 +22,14 @@
 (global-set-key (kbd "C-x C-g") 'grep)
 
 (setq treesit-language-source-alist
-   '((bash "https://github.com/tree-sitter/tree-sitter-bash")
-     (go-mod "https://github.com/camdencheek/tree-sitter-go-mod")
-     (go "https://github.com/tree-sitter/tree-sitter-go")))
+      '((bash "https://github.com/tree-sitter/tree-sitter-bash")
+	(go-mod "https://github.com/camdencheek/tree-sitter-go-mod")
+	(go "https://github.com/tree-sitter/tree-sitter-go")))
+
+(setq c-default-style
+      '((java-mode . "java")
+	(awk-mode . "awk")
+	(other . "linux")))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'naysayer t)
