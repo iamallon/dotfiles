@@ -15,7 +15,7 @@ sudo usermod -a -G _seatd $USER
 sudo xbps-install -y google-fonts-ttf firefox ffmpeg
 
 # Development tools.
-sudo xbps-install -y git starship zoxide eza nano btop emacs-pgtk
+sudo xbps-install -y git starship zoxide eza nano btop emacs-pgtk ripgrep
 
 # Compilers & misc.
 sudo xbps-install -y go clang
@@ -41,5 +41,5 @@ if [ -n $DISCORD_PKG ]; then
     cd void-packages
     echo XBPS_ALLOW_RESTRICTED=yes >> etc/conf
     sudo ./xbps-src pkg discord
-    sudo xbps-install -y "$HOME/void-packages/hostdir/binpkgs/nonfree" discord
+    sudo xbps-install -Ry "$HOME/void-packages/hostdir/binpkgs/nonfree" discord
 fi
