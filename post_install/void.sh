@@ -34,3 +34,12 @@ if [ -n $STEAM_PKG ]; then
 
     sudo xbps-install -y steam
 fi
+
+if [ -n $DISCORD_PKG ]; then
+    cd $HOME
+    git clone https://github.com/void-linux/void-packages.git
+    cd void-packages
+    echo XBPS_ALLOW_RESTRICTED=yes >> etc/conf
+    sudo ./xbps-src pkg discord
+    sudo xbps-install -y "$HOME/void-packages/hostdir/binpkgs/nonfree" discord
+fi
