@@ -10,10 +10,12 @@ sudo xbps-install -y sway dbus mesa-dri seatd foot wob wmenu grim
 
 sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/seatd /var/service/
-
 sudo usermod -a -G _seatd $USER
 
 sudo xbps-install -y google-fonts-ttf firefox ffmpeg
+
+# Development tools.
+sudo xbps-install -y git starship zoxide eza nano btop emacs-pgtk
 
 sudo xbps-install -y pulse-audio alsa-plugin-pulseaudio pulseaudio-utils
 
