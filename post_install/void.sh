@@ -22,7 +22,7 @@ sudo xbps-install -y go clang
 
 sudo xbps-install -y pulse-audio alsa-plugin-pulseaudio pulseaudio-utils
 
-if [ -n $STEAM_PKG ]; then
+if [ -n "${STEAM_PKG}" ]; then
     sudo xbps-install -y void-repo-nonfree void-repo-multilib{,-nonfree}
     sudo xbps-install -S
     sudo xbps-install -y libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit libva-32bit
@@ -35,7 +35,7 @@ if [ -n $STEAM_PKG ]; then
     sudo xbps-install -y steam
 fi
 
-if [ -n $DISCORD_PKG ]; then
+if [ -n "${DISCORD_PKG}" ]; then
     cd $HOME
     git clone https://github.com/void-linux/void-packages.git
     cd void-packages
