@@ -12,7 +12,7 @@ sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/seatd /var/service/
 sudo usermod -a -G _seatd $USER
 
-sudo xbps-install -y google-fonts-ttf firefox ffmpeg
+sudo xbps-install -y dejavu-fonts-ttf google-fonts-ttf firefox ffmpeg
 
 # Development tools.
 sudo xbps-install -y git starship zoxide eza nano btop emacs-pgtk ripgrep
