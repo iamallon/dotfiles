@@ -18,7 +18,7 @@ sudo xbps-install -y dejavu-fonts-ttf google-fonts-ttf firefox ffmpeg
 sudo xbps-install -y git starship zoxide eza nano btop emacs-pgtk ripgrep
 
 # Compilers & misc.
-sudo xbps-install -y go clang make ruby
+sudo xbps-install -y go clang make ruby ruby-devel
 
 sudo xbps-install -y pulse-audio alsa-plugin-pulseaudio pulseaudio-utils
 
