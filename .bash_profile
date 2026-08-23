@@ -1,5 +1,8 @@
 # .bash_profile
-PATH=$PATH:$HOME/go/bin
+export XDG_RUNTIME_DIR=$HOME/.sway
+export GEM_HOME=$HOME/gems
+
+PATH=$PATH:$HOME/go/bin:$HOME/gems/bin
 
 # Get the aliases and functions
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
