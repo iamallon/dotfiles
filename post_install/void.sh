@@ -22,6 +22,8 @@ sudo xbps-install -y go clang make ruby ruby-devel
 
 sudo xbps-install -y pulse-audio alsa-plugin-pulseaudio pulseaudio-utils
 
+subo xbps-install -y gnupg
+
 if [ -n "${STEAM_PKG}" ]; then
     sudo xbps-install -y void-repo-nonfree void-repo-multilib{,-nonfree}
     sudo xbps-install -S
