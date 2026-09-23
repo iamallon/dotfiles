@@ -20,10 +20,14 @@ sudo xbps-install -y git starship zoxide eza nano btop emacs-pgtk ripgrep
 # Compilers & misc.
 sudo xbps-install -y go clang make ruby ruby-devel
 
+# Audio & misc.
 sudo xbps-install -y pulse-audio alsa-plugin-pulseaudio pulseaudio-utils
 
-subo xbps-install -y gnupg
+# Security tools & daemons.
+subo xbps-install -y gnupg pcsc-ccid pcsclite
+sudo ln -s /etc/sv/pcscd /var/service/
 
+# Optional.
 if [ -n "${STEAM_PKG}" ]; then
     sudo xbps-install -y void-repo-nonfree void-repo-multilib{,-nonfree}
     sudo xbps-install -S
