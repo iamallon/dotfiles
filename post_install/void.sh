@@ -24,8 +24,10 @@ sudo xbps-install -y go clang make ruby ruby-devel
 sudo xbps-install -y pulse-audio alsa-plugin-pulseaudio pulseaudio-utils
 
 # Security tools & daemons.
-subo xbps-install -y gnupg pcsc-ccid pcsclite
+subo xbps-install -y gnupg gnupg2-scdaemon yubikey-manager pcsc-ccid pcsclite
 sudo ln -s /etc/sv/pcscd /var/service/
+
+echo disable-ccid >> ~/.gnupg/scdaemon.conf
 
 # Optional.
 if [ -n "${STEAM_PKG}" ]; then
