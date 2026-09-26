@@ -28,6 +28,7 @@ subo xbps-install -y gnupg gnupg2-scdaemon yubikey-manager pcsc-ccid pcsclite
 sudo ln -s /etc/sv/pcscd /var/service/
 
 echo disable-ccid >> ~/.gnupg/scdaemon.conf
+echo enable-ssh-support >> ~/.gnupg/gpg-agent.conf
 
 # Optional.
 if [ -n "${STEAM_PKG}" ]; then

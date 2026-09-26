@@ -1,7 +1,8 @@
 # .bash_profile
-export XDG_RUNTIME_DIR=$HOME/.sway
-export GEM_HOME=$HOME/gems
-export DOTNET_ROOT=$HOME/.dotnet
+export XDG_RUNTIME_DIR="$HOME/.sway"
+export GEM_HOME="$HOME/gems"
+export DOTNET_ROOT="$HOME/.dotnet"
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 PATH=$PATH:$HOME/go/bin:$HOME/gems/bin:$HOME/.dotnet:$HOME/.dotnet/tools
 
