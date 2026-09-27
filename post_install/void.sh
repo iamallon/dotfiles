@@ -28,6 +28,7 @@ subo xbps-install -y gnupg gnupg2-scdaemon yubikey-manager pcsc-ccid pcsclite
 sudo ln -s /etc/sv/pcscd /var/service/
 
 echo disable-ccid >> ~/.gnupg/scdaemon.conf
+echo keyserver hkps://keys.openpgp.org >> ~/.gnupg/gpg.conf
 echo enable-ssh-support >> ~/.gnupg/gpg-agent.conf
 
 # Optional.
