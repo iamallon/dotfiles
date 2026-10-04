@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t; -*-
 (tool-bar-mode -1)
-(toggle-scroll-bar -1)
+(scroll-bar-mode -1)
 (menu-bar-mode -1)
 (add-to-list 'default-frame-alist '(font . "IBM Plex Mono-18:weight=medium"))
 (add-to-list 'default-frame-alist '(alpha-background . 85))
