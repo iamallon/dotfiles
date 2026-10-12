@@ -17,7 +17,7 @@ su "$TARGET" -c "mkdir -p ~/.sway"
 
 pkg install -y sway dbus seatd foot wob wmenu grim xdg-utils
 
-pw usermod "$TARGET" -G wheel,video
+pw groupmod video -m "$TARGET"
 sysrc seatd_enable="YES"
 sysrc dbus_enable="YES"
 
