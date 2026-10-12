@@ -9,7 +9,7 @@ pkg update && pkg upgrade
 # DRI drivers
 
 pkg install -y drm-kmod
-sysrc kld_list="i915kms"
+sysrc kld_list+="i915kms"
 
 # Sway and deps.
 
