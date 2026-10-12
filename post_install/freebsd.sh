@@ -34,6 +34,7 @@ chsh -s "$(whereis -bq bash)" "$TARGET"
 pkg install -y gnupg pcsc-lite libccid
 pkg install -y -g py*-yubikey-manager
 sysrc pcscd_enable="YES"
+sysrc pcscd_flags="--disable-polkit"
 
 su "$TARGET" -c "mkdir -m 700 -p ~/.gnupg"
 su "$TARGET" -c "echo disable-ccid > ~/.gnupg/scdaemon.conf"
