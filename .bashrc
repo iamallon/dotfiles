@@ -9,7 +9,7 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
-if [ "$(tty)" = "/dev/tty1" ]; then
+if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" = "/dev/ttyv0" ]; then
   dbus-run-session sway
 fi
 
