@@ -1,0 +1,10 @@
+# Special keys to adjust volume via PulseAudio
+bindsym --locked XF86AudioRaiseVolume exec mixer vol=+2% && mixer vol.volume | cut -d: -f2 | awk '{print $1 * 100}' > $wobpipe
+bindsym --locked XF86AudioLowerVolume exec mixer vol=-2% && mixer vol.volume | cut -d: -f2 | awk '{print $1 * 100}' > $wobpipe
+
+# Special keys to adjust irightness via brightnessctl
+bindsym --locked XF86AudioStop exec backlight incr 10 && backlight | cut -d: -f2 > $wobpipe
+bindsym --locked XF86AudioPlay exec backlight decr 10 && backlight | cut -d: -f2 > $wobpipe
+
+# Special key to take a screenshot with grim
+bindsym Print exec grim

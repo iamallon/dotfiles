@@ -15,7 +15,7 @@ sysrc kld_list+="i915kms"
 
 su "$TARGET" -c "mkdir -p ~/.sway"
 
-pkg install -y sway dbus seatd foot wob wmenu grim xdg-utils
+pkg install -y sway dbus seatd foot wev wob wmenu grim xdg-utils
 
 pw groupmod video -m "$TARGET"
 sysrc seatd_enable="YES"

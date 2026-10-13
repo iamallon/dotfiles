@@ -6,7 +6,7 @@ mkdir -p ~/.sway
 
 sudo xbps-install -Syu
 
-sudo xbps-install -y sway dbus mesa-dri seatd foot wob wmenu grim xdg-utils
+sudo xbps-install -y sway dbus mesa-dri seatd foot wev wob wmenu grim xdg-utils
 
 sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/seatd /var/service/
