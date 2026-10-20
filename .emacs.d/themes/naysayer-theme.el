@@ -85,8 +85,8 @@
 
    ;; Plugins
    ;; *****************************************************************************
-   `(trailing-whitespace ((t (:foreground nil :background ,warning))))
-   `(whitespace-trailing ((t (:background nil :foreground ,warning :inverse-video t))))
+   `(trailing-whitespace ((t (:foreground nil :background ,error))))
+   `(whitespace-trailing ((t (:background nil :foreground ,error :inverse-video t))))
 
    `(linum ((t (:foreground ,line-fg :background ,background))))
    `(linum-relative-current-face ((t (:foreground ,white :background ,background))))
@@ -153,7 +153,7 @@
     ;; better compatibility with default DOOM mode-line
    `(error ((t (:foreground nil :weight normal))))
    `(doom-modeline-project-dir ((t (:foreground nil :weight bold))))
-   
+
    ;; js2-mode
    `(js2-function-call ((t (:inherit (font-lock-function-name-face)))))
    `(js2-function-param ((t (:foreground ,text))))

@@ -17,6 +17,10 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 (setq use-short-answers t)
+(setq-default show-trailing-whitespace t)
+
+(add-hook 'before-save-hook
+          'delete-trailing-whitespace)
 
 (setq grep-command "rg -nHS --no-heading \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\" -e ")
 (setq grep-use-null-device nil)
