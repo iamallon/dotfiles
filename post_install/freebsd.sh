@@ -27,7 +27,7 @@ pkg install -y dejavu google-fonts firefox ffmpeg
 pkg install -y stow git starship zoxide eza nano btop emacs-wayland ripgrep
 
 # Compilers & misc.
-pkg install -y bash go ruby
+pkg install -y bash go ruby gdb gmake
 chsh -s "$(whereis -bq bash)" "$TARGET"
 
 # Security tools & daemons.
