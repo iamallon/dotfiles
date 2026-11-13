@@ -36,6 +36,10 @@
 	(awk-mode . "awk")
 	(other . "linux")))
 
+(add-to-list 'same-window-buffer-names "*compilation*")
+(setq compilation-scroll-output 'first-error)
+(setq compilation-ask-about-save nil)
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'naysayer t)
 
