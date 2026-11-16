@@ -24,7 +24,7 @@ sudo xbps-install -y go clang gdb make ruby ruby-devel
 sudo xbps-install -y pulse-audio alsa-plugin-pulseaudio pulseaudio-utils
 
 # Security tools & daemons.
-subo xbps-install -y gnupg gnupg2-scdaemon yubikey-manager pcsc-ccid pcsclite
+sudo xbps-install -y gnupg gnupg2-scdaemon yubikey-manager pcsc-ccid pcsclite
 sudo ln -s /etc/sv/pcscd /var/service/
 
 mkdir -m 700 -p ~/.gnupg
