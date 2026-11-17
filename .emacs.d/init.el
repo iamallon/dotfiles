@@ -19,12 +19,15 @@
 (setq use-short-answers t)
 (setq-default show-trailing-whitespace t)
 
-(add-hook 'before-save-hook
-          'delete-trailing-whitespace)
+(add-hook 'before-save-hook #'delete-trailing-whitespace)
 
 (setq grep-command "rg -nHS --no-heading \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\" -e ")
 (setq grep-use-null-device nil)
 (global-set-key (kbd "C-x C-g") 'grep)
+
+(hide-ifdef-mode 1)
+(add-hook 'prog-mode-hook #'hide-ifdef-mode)
+(setq hide-ifdef-initially t)
 
 (setq treesit-language-source-alist
       '((bash "https://github.com/tree-sitter/tree-sitter-bash")
