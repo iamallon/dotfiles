@@ -13,6 +13,11 @@
 (editorconfig-mode 1)
 (etags-regen-mode 1)
 
+(global-unset-key (kbd "<left>"))
+(global-unset-key (kbd "<right>"))
+(global-unset-key (kbd "<up>"))
+(global-unset-key (kbd "<down>"))
+
 (setq inhibit-splash-screen t)
 (setq auto-save-default nil)
 (setq make-backup-files nil)
