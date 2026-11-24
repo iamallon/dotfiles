@@ -44,6 +44,9 @@ if [ -n "${STEAM_PKG}" ]; then
     sudo xbps-install -y vulkan-loader mesa-vulkan-radeon mesa-vulkan-radeon-32bit
 
     sudo xbps-install -y steam
+
+    # For controller inputs.
+    sudo usermod -a -G input $USER
 fi
 
 if [ -n "${DISCORD_PKG}" ]; then
